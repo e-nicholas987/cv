@@ -219,10 +219,7 @@ section.resume .contact .wrapper > div a:hover {
     padding-right: 1rem;
   }
 
-  section.hero a {
-    bottom: 5%;
-  }
-  section.hero img {
+   section.hero img {
     width: 100px;
   }
   section.hero h1,
