@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --yellow: #ffdb67;
+  --gray: rgba(0, 0, 0, 0.6);
+  --dark-gray: rgba(0, 0, 0, 0.8);
+  --primary: #000;
+}
+
+html{
+  scroll-behavior: smooth;
+
+}
+body {
+  background: var(--yellow);
+  line-height: 1.6;
+  font-family: "Montserrat", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-transform: uppercase;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary);
+}
+main {
+  padding: 2rem ;
+}
+
+section {
+  padding: 2rem 0;
+  width: 70%;
+}
+
+h2 {
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+section.hero {
+  min-height: 90vh;
+  position: relative;
+}
+
+section.hero img {
+  display: block;
+  border-radius: 50%;
+  width: 10rem;
+  border: 1px solid var(--primary);
+  margin-bottom: 4rem;
+}
+
+section.hero h1 {
+  font-size: 6rem;
+  font-weight: 700;
+  padding: 0;
+  line-height: 1;
+  padding-bottom: 1.75rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+section.hero h1:after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 5rem;
+  height: 1px;
+  background: var(--primary);
+}
+
+section.hero p{
+  font-weight: 600;
+}
+
+section.hero a{
+  position: absolute;
+  bottom: 0%;
+  display: flex;
+  align-items: center;
+ 
+}
+
+section.resume {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+section.resume ul {
+  border-left: 2px solid rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+section.resume ul li {
+  position: relative;
+  list-style: none;
+  left: -2px;
+  border-left: 2px solid var(--primary);
+  padding: 0 1rem;
+}
+
+section.resume ul li h4 {
+  margin-bottom: 0;
+}
+
+section.resume ul li .duration {
+  display: block;
+  position: relative;
+  top: -0.2rem;
+  margin-bottom: 0.5rem;
+  color: var(--dark-gray);
+  font-size: 0.8rem;
+}
+
+section.resume .skills .wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+}
+
+section.resume .skills strong {
+  position: relative;
+  text-transform: uppercase;
+  padding-bottom: 1rem;
+}
+section.resume .skills strong::before,
+section.resume .skills strong::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 100%;
+  width: 100%;
+  border-bottom:2px solid rgba(0, 0, 0, 0.2);
+}
+section.resume .skills strong::after {
+  background: var(--primary);
+}
+
+
+
+section.resume .skills strong.css::after {
+  width: 80%;
+}
+section.resume .skills strong.js::after {
+  width: 70%;
+}
+section.resume .skills strong.html::after {
+  width: 75%;
+}
+section.resume .skills strong.react::after {
+  width: 50%;
+}
+section.resume .skills strong.svelte::after {
+  width: 50%;
+}
+
+section.resume .contact .wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+
+section.resume .contact strong {
+  color: var(--gray);
+  font-size: .85rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+section.resume .contact .wrapper > div {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5rem;
+}
+
+section.resume .contact .wrapper > div a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width:768px){
+  body, html{
+    overflow-x: hidden;
+  }
+  section{
+    width: 100%;
+  }
+
+  section.hero h1{
+    font-size: 4rem;
+  }
+
+  section.resume .contact .wrapper,
+  section.resume .skills .wrapper  {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width:375px){
+  main{
+    padding-left:1rem;
+    padding-right:1rem ;
+  }
+  section.hero img {
+    width: 100px;
+  }
+  section.hero h1, h2{
+    font-size: 2rem;
+  }
+
+  section.resume .contact .wrapper > div{
+    font-size: 1.15rem;
+  }
+}
