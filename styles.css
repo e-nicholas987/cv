@@ -13,9 +13,8 @@
   --primary: #000;
 }
 
-html{
+html {
   scroll-behavior: smooth;
-
 }
 body {
   background: var(--yellow);
@@ -39,7 +38,7 @@ a {
   color: var(--primary);
 }
 main {
-  padding: 2rem ;
+  padding: 0 2rem;
 }
 
 section {
@@ -53,7 +52,7 @@ h2 {
 }
 
 section.hero {
-  min-height: 90vh;
+  min-height: 100vh;
   position: relative;
 }
 
@@ -85,16 +84,15 @@ section.hero h1:after {
   background: var(--primary);
 }
 
-section.hero p{
+section.hero p {
   font-weight: 600;
 }
 
-section.hero a{
+section.hero a {
   position: absolute;
-  bottom: 0%;
+  bottom: 4rem;
   display: flex;
   align-items: center;
- 
 }
 
 section.resume {
@@ -149,13 +147,11 @@ section.resume .skills strong::after {
   left: 0;
   top: 100%;
   width: 100%;
-  border-bottom:2px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
 }
 section.resume .skills strong::after {
   background: var(--primary);
 }
-
-
 
 section.resume .skills strong.css::after {
   width: 80%;
@@ -181,7 +177,7 @@ section.resume .contact .wrapper {
 
 section.resume .contact strong {
   color: var(--gray);
-  font-size: .85rem;
+  font-size: 0.85rem;
   text-transform: uppercase;
   margin-bottom: 1rem;
 }
@@ -196,39 +192,45 @@ section.resume .contact .wrapper > div a:hover {
   text-decoration: underline;
 }
 
-@media (max-width:768px){
-  body, html{
+@media (max-width: 768px) {
+  body,
+  html {
     overflow-x: hidden;
   }
-  section{
+  section {
     width: 100%;
   }
 
-  section.hero h1{
+  section.hero h1 {
     font-size: 4rem;
   }
 
   section.resume .contact .wrapper,
-  section.resume .skills .wrapper  {
+  section.resume .skills .wrapper {
     display: grid;
     grid-template-columns: 1fr;
     gap: 2.5rem;
   }
 }
 
-@media (max-width:375px){
-  main{
-    padding-left:1rem;
-    padding-right:1rem ;
+@media (max-width: 575px) {
+  main {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  section.hero a {
+    bottom: 5%;
   }
   section.hero img {
     width: 100px;
   }
-  section.hero h1, h2{
+  section.hero h1,
+  h2 {
     font-size: 2rem;
   }
 
-  section.resume .contact .wrapper > div{
+  section.resume .contact .wrapper > div {
     font-size: 1.15rem;
   }
 }
