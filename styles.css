@@ -60,6 +60,7 @@ section.hero img {
   display: block;
   border-radius: 50%;
   width: 10rem;
+  height: 10rem;
   border: 1px solid var(--primary);
   margin-bottom: 4rem;
 }
@@ -225,6 +226,7 @@ section.resume .contact .wrapper > div a:hover {
 
    section.hero img {
     width: 100px;
+    height: 100px;
   }
 
   section.hero a{
